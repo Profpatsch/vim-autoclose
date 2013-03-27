@@ -1,6 +1,6 @@
 " File: autoclose.vim
 " Author: Karl Guertin <grayrest@gr.ayre.st>
-" Version: 1.2
+" Version: 1.2.1
 " Last Modified: June 18, 2009
 " Description: AutoClose, closes what's opened.
 "
