@@ -208,7 +208,11 @@ function <SID>QuoteDelim(char) " ---{{{2
   if (a:char == '"' && exists('b:current_syntax') && b:current_syntax ==# 'vim' && line =~ '^\s*$')
     return '"'
   endif
-
+  " In Clojure syntax, there is no doubled '', yet you need a single one for
+  " literals.
+  if (a:char == '''' && exists('b:current_syntax') && b:current_syntax ==# 'clojure')
+    return ''''
+  endif
   if line[col - 2] == "\\"
     "Inserting a quoted quotation mark into the string
     return a:char
