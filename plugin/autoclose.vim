@@ -76,6 +76,7 @@ fun! <SID>AutoCloseMappingsOn() " {{{2
     inoremap <silent> <BS> <C-R>=<SID>OpenCloseBackspaceOrDel("BS")<CR>
     inoremap <silent> <C-h> <C-R>=<SID>OpenCloseBackspaceOrDel("BS")<CR>
     inoremap <silent> <Del> <C-R>=<SID>OpenCloseBackspaceOrDel("Del")<CR>
+    inoremap <silent> {<CR> {<CR>}<C-O>O
     inoremap <silent> <Esc> <C-R>=<SID>CloseStackPop('')<CR><Esc>
     inoremap <silent> <C-[> <C-R>=<SID>CloseStackPop('')<CR><C-[>
     "the following simply creates an ambiguous mapping so vim fully
